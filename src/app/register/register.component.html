@@ -1,0 +1,96 @@
+<div class="main-card mb-3 card">
+  <div class="card-header" style="text-align: center">Register Here</div>
+  <div class="card-body">
+    <form  #registerForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="row mt-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            name="first_name"
+            [(ngModel)]="register.first_name"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            name="last_name"
+            [(ngModel)]="register.last_name"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="register.email"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Phone Number"
+            name="phone"
+            [(ngModel)]="register.phone"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter password"
+            name="password"
+            [(ngModel)]="register.password"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Confirm password"
+            name="confirm_password"
+            [(ngModel)]="register.confirm_password"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      Already have an account?&nbsp;
+      <a routerLink="/login" target="_blank" rel="noopener"> login here.</a>
+      <br />
+
+      <button
+        type="submit"
+        class="btn btn-primary pull-right mt-3"
+       [disabled]="registerForm.invalid"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+</div>

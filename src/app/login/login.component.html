@@ -1,0 +1,46 @@
+<div class="main-card mb-3 card">
+  <div class="card-header" style="text-align: center">Login Here</div>
+  <div class="card-body">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="row mt-4">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="login.email"
+            id="email"
+            required
+          />
+        </div>
+      </div>
+      <br />
+
+      <div class="row">
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter password"
+            name="password"
+            [(ngModel)]="login.password"
+            id="password"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      No account?&nbsp;
+      <a routerLink="/register" target="_blank" rel="noopener">
+        Register here.</a
+      >
+      <br />
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary pull-right mt-3" [disabled]="loginForm.invalid">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
