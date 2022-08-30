@@ -258,3 +258,8 @@
       visibility: hidden;
     }
   }
+
+  .container{
+    justify-content: center;
+    margin-top: 120px;
+  }
